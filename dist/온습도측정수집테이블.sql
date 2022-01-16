@@ -1,0 +1,22 @@
+/*
+DROP TABLE THMonLog
+
+CREATE TABLE THMonLog
+(
+	ChkTime		DATETIME,
+	Temperature	NUMERIC(5,2),
+	Humidity	NUMERIC(5,2)
+)
+
+CREATE INDEX CIX_THMonLog ON THMonLog(ChkTime)
+*/
+
+SELECT GETDATE()
+
+SELECT * FROM THMonLog ORDER BY ChkTime DESC
+INSERT INTO THMonLog(ChkTime, Temperature, Humidity) VALUES ('2021-01-09 23:21:33.537', 20.1, 45.8)
+
+TRUNCATE TABLE THMonLog
+
+
+INSERT INTO THMon.dbo.THMonLog (ChkTime, Temperature, Humidity) VALUES('2021-01-10 01:46:03.731015', 20.4, 45.5)
